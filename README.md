@@ -1,13 +1,13 @@
+### By Kalyan Mishra ✔
 
->    git clone https://github.com/thekalyan001/GMO_web.git
-> 
->    cd GMO_web
-> 
->    npm i
-> 
->    npm run dev
+<h1>GMO</h1>
 
+> 1. git clone project
+> 2. cd GMO_web
+> 3. npm i
+> 4. npm run dev
 
+<hr>
 
 # React + TypeScript + Vite
 

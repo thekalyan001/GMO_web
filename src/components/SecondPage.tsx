@@ -5,7 +5,7 @@ import DepartmentList from './DepartmentList';
 import './SecondPage.css';
 
 const SecondPage: React.FC = () => {
-  const userDetails = localStorage.getItem('userDetails');
+  const userDetails = JSON.parse(localStorage.getItem('userDetails') || '{}');
   if (!userDetails) {
     return <Navigate to="/" replace state={{ message: 'Please enter your details first.' }} />;
   }

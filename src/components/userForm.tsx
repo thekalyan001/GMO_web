@@ -2,6 +2,7 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { TextField, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import './components.css';
 
 interface UserFormData {
@@ -12,13 +13,14 @@ interface UserFormData {
 
 const UserForm: React.FC = () => {
   const { control, handleSubmit } = useForm<UserFormData>();
+  const navigate = useNavigate();
 
   const onSubmit = (data: UserFormData) => {
     localStorage.setItem('userDetails', JSON.stringify(data));
-    window.location.href = '/second-page';
+    navigate('/second-page');
   };
 
-  //on load of this page clear localstorage.
+  // Clear local storage when the page loads.
   React.useEffect(() => {
     localStorage.removeItem('userDetails');
   }, []);
